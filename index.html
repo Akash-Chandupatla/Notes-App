@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="src/tailwind/output.css" />
+  </head>
+  <body class="bg-beigeCustom font-mukta">
+    <header class="flex items-center justify-between bg-forestGreen p-4">
+      <div class="flex">
+        <img src="public/images/H1.svg" alt="" width="60rem" />
+        <h1
+          class="py-4 pl-4 text-5xl font-bold text-beigeTitleCustom underline decoration-solid"
+        >
+          NOTES APP
+        </h1>
+      </div>
+      <button
+        id="deleteAllNotes"
+        class="h-10 rounded-md bg-red-600 px-6 text-lg text-white"
+      >
+        Delete All Notes
+      </button>
+    </header>
+
+    <section class="m-4 mx-8">
+      <h2 class="p-4 text-2xl font-bold underline">Create new note</h2>
+      <div
+        class="createNote w-2/5 rounded-md border-2 border-forestGreen bg-white p-4"
+      >
+        <div class="flex border-b-2 border-b-forestGreen">
+          <img src="public/images/n1.svg" alt="" width="25rem" />
+          <input
+            class="my-3 block w-full p-2 text-2xl outline-none"
+            type="text"
+            id="createNoteTitle"
+            placeholder="Enter Note title"
+          />
+        </div>
+        <textarea
+          class="my-3 block w-full p-2 text-lg outline-none"
+          id="createNoteContent"
+          cols="30"
+          rows="7"
+        ></textarea>
+        <div
+          class="cursor-pointer rounded-md bg-green-600 px-4 py-2 text-center text-xl text-white"
+          id="createNoteButton"
+        >
+          create note
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="notesList"
+      class="notesList grid grid-cols-4 overflow-auto p-4"
+    >
+      <div class="note">
+        <div class="noteHead">
+          <h4>Sample</h4>
+          <img src="public/images/C1.svg" alt="" width="25rem" />
+        </div>
+        <p class="noteDesc">Sample Text</p>
+        <button class="noteDeleteButton">Delete Note</button>
+      </div>
+    </section>
+
+    <script type="module" src="build/main.js"></script>
+  </body>
+</html>
